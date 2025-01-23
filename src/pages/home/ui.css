@@ -1,0 +1,57 @@
+.circle {
+  width: 100%;
+  position: absolute;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: clamp(60px, 10vw, 120px);
+  position: absolute;
+  z-index: 1;
+  left: 100px;
+  top: 20px;
+  color: #AFAFAF;
+  text-transform: uppercase;
+  font-family: "Orbitron", sans-serif;
+  text-wrap: wrap;
+  line-height: 100%;
+  margin-right: 30px;
+  margin: 0;
+}
+
+
+@keyframes gradientAnimation {
+  0% {
+    stop-color: #004d40; /* Темно-зеленый */
+  }
+  50% {
+    stop-color: #003366; /* Темно-синий */
+  }
+  100% {
+    stop-color: #004d40; /* Темно-зеленый */
+  }
+}
+
+.stop1 {
+  animation: gradientAnimation 4s infinite;
+}
+
+.stop2 {
+  animation: gradientAnimation 4s infinite;
+  animation-delay: 2s;
+}
+
+@media only screen and (max-width: 700px) {
+  .title {
+    left: auto;
+    text-align: center;
+    top: 150px;
+  }
+}
